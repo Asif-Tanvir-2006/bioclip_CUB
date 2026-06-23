@@ -6,7 +6,7 @@ from inference import Inference
 import torch
 model = EncDec(512, 16).to(device='cuda')
 # model.load_state_dict(torch.load('model.pth', weights_only=True))
-train_dataset = Dataset('train.json', 0, 1000)
+train_dataset = Dataset('train.json', 0, 1000000000)
 
 trainer = Trainer(model, train_dataset).to(device='cuda')
 
